@@ -1,0 +1,35 @@
+<Input>:
+
+    name: name  # Global variable name references the id name
+    email: email  # Global variable email references the id email
+
+    GridLayout:
+        #cols:1
+
+        GridLayout:
+
+            cols:1
+            #size: root.width -50, root.height -50
+            #pos: 100, 100
+
+            GridLayout:
+                cols:2
+
+                Label:
+                    text: "Name: "
+
+                TextInput:
+                    id: name  # <- Add this
+                    multiline:False
+
+                Label:
+                    text: "Email: "
+
+                TextInput:
+                    id: email  # <-Add this
+                    multiline:False
+
+            Button:
+                background_color: (255,0,0,0.2)
+                text:"Submit"
+                on_press: root.submit() # <- Add this
